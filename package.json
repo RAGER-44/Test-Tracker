@@ -1,0 +1,13 @@
+{
+  "name": "task-tracker-api",
+  "version": "1.0.0",
+  "description": "In-memory RESTful API for tracking tasks, built with Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
