@@ -1,13 +1,16 @@
 {
   "name": "task-tracker-api",
-  "version": "1.0.0",
-  "description": "In-memory RESTful API for tracking tasks, built with Node.js and Express",
+  "version": "2.0.0",
+  "description": "RESTful Task Tracker API built with Node.js, Express and MongoDB (Mongoose)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0"
   }
 }
