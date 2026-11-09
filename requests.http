@@ -1,0 +1,39 @@
+## 1. GET all tasks
+GET http://localhost:3000/api/resources
+
+### 2. POST a new task (expect 201)
+POST http://localhost:3000/api/resources
+Content-Type: application/json
+
+{
+  "title": "Connect API to MongoDB",
+  "status": "in-progress"
+}
+
+### 3. POST with no title (expect 400)
+POST http://localhost:3000/api/resources
+Content-Type: application/json
+
+{
+  "status": "pending"
+}
+
+### 4. GET one task
+GET http://localhost:3000/api/resources/6af15a5f4cc53ff9e10390ca
+
+### 5. GET an id that does not exist (expect 404)
+GET http://localhost:3000/api/resources/64b000000000000000000000
+
+### 6. PUT update the status
+PUT http://localhost:3000/api/resources/6af15a5f4cc53ff9e10390ca
+Content-Type: application/json
+
+{
+  "status": "done"
+}
+
+### 7. DELETE the task
+DELETE http://localhost:3000/api/resources/6af15a5f4cc53ff9e10390ca
+
+### 8. GET the deleted task (expect 404)
+GET http://localhost:3000/api/resources/6af15a5f4cc53ff9e10390ca
